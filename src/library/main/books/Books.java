@@ -114,6 +114,7 @@ public class Books {
     public void createBook(){
         System.out.println("Digite el ID del libro es: ");
         iDBooks = sc.nextInt();
+        book.add(iDBooks);
         sc.nextLine();
         System.out.println("Digite el titulo del libro: ");
         titleBook = sc.nextLine();
