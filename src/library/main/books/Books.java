@@ -1,5 +1,9 @@
 package library.main.books;
 
+import library.main.books.Editorials;
+import library.main.books.Category;
+import library.main.books.Authors;
+
 import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.Scanner;
@@ -125,8 +129,12 @@ public class Books {
         sc.nextLine();
         System.out.println("Digite una descripcion sobre el libro: ");
         description = sc.nextLine();
+    }
 
-
+    public void printBooks(){
+        for (Object item: book){
+            System.out.println(item);
+        }
     }
 
     public  void selectBook(){

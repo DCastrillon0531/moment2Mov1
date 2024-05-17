@@ -1,7 +1,5 @@
 package library.main.books;
 
-import library.main.users.ReadersUsers;
-
 public class Test {
     public static void main(String[] args) {
         Authors authors = new Authors();
@@ -10,7 +8,12 @@ public class Test {
         Editorials editorials = new Editorials();
         Rent rent = new Rent();
 
-        
+        System.out.println("-----------------------------");
+        System.out.println("Bienvid@ a la libreria CESDE");
+        System.out.println("-----------------------------");
+        System.out.println("   ");
+
+
 
         authors.createAuthor();
         authors.selectAuthor();
@@ -22,8 +25,8 @@ public class Test {
         editorials.selectEditorial();
 
         books.createBook();
-        books.selectBook();
-
+        //books.selectBook();
+        books.printBooks();
         rent.registrerBookRent();
         rent.printBookRent();
     }

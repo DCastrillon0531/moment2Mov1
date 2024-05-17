@@ -2,15 +2,15 @@ package library.main.books;
 
 import library.main.users.ReadersUsers;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+//import java.text.SimpleDateFormat;
+//import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.Scanner;
 
 public class Rent {
 
     Scanner sc = new Scanner(System.in);
-    SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+   // SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 
     private int iDRent;
     ReadersUsers readersUsers;
@@ -73,13 +73,46 @@ public class Rent {
     public void registrerBookRent(){
         System.out.println("Ingrese el codigo de la renta: ");
         iDRent = sc.nextInt();
+        rent.add(iDRent);
         sc.nextLine();
-        rent.add(readersUsers);
-        rent.add(books);
+        System.out.println("Ingrese el ID del cliente: ");
+        int idReaders = readersUsers.getIdReaders();
+        rent.add(idReaders);
+        sc.nextLine();
+        System.out.println("Ingrese el nombre del cliente: ");
+        String nameReader = readersUsers.getNameUser();
+        rent.add(nameReader);
+        System.out.println("Ingrese el numero de celular del cliente: ");
+        int cellPhone = readersUsers.getCellphone();
+        rent.add(cellPhone);
+        sc.nextLine();
+        System.out.println("Ingrese el correo del cliente: ");
+        String email = readersUsers.getEmail();
+        rent.add(email);
+        System.out.println("Ingrese la direccion del cliente: ");
+        String address = readersUsers.getAddress();
+        rent.add(address);
+        System.out.println("Ingrese el codigo postal: ");
+        int postalCode = readersUsers.getPostalCode();
+        rent.add(postalCode);
+        System.out.println("Ingrese las observaciones o comentarios: ");
+        String observations = readersUsers.getObservations();
+        rent.add(observations);
+        System.out.println("Ingrese el ID del libro: ");
+        int idBook = books.getiDBooks();
+        rent.add(idBook);
+        System.out.println("Ingrese el titulo del libro: ");
+        String titleBook = books.getTitleBook();
+        rent.add(titleBook);
+        System.out.println("Ingrese la fecha de lanzamiento del libro: ");
+        String releaseDateBook = books.getReleaseDateBook();
+        rent.add(releaseDateBook);
         System.out.println("Ingrese la fecha de salida de la renta: ");
         departureDate = sc.nextLine();
+        rent.add(departureDate);
         System.out.println("Ingrese la fecha de entrada de la renta: ");
         entryDate = sc.nextLine();
+        rent.add(entryDate);
 
     }
 
